@@ -20,7 +20,7 @@ function! I18nTranslateString()
     endif
     call s:addStringToYamlStore(text, fullKey)
   else
-    let @x = s:generateI18nCall(key, variables, "t('", "')")
+    let @x = s:generateI18nCall(key, variables, "I18n.t('", "')")
     call s:addStringToYamlStore(text, key)
   endif
   " replace selection
